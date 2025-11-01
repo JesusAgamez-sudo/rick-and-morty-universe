@@ -1,0 +1,82 @@
+/* Estilos globales psicodélicos para Rick and Morty */
+:root {
+  --primary-green: #00ff00;
+  --primary-pink: #ff00ff;
+  --primary-purple: #8b00ff;
+  --primary-cyan: #00ffff;
+  --dark-bg: #0a0a0a;
+  --card-bg: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --accent-1: #ff6b6b;
+  --accent-2: #4ecdc4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--dark-bg);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Efectos de portal gun */
+@keyframes portal-glow {
+  0%, 100% { 
+    box-shadow: 
+      0 0 20px var(--primary-green),
+      0 0 40px var(--primary-pink),
+      0 0 60px var(--primary-purple);
+  }
+  50% { 
+    box-shadow: 
+      0 0 30px var(--primary-pink),
+      0 0 60px var(--primary-green),
+      0 0 90px var(--primary-cyan);
+  }
+}
+
+@keyframes text-glow {
+  0%, 100% { 
+    text-shadow: 
+      0 0 10px var(--primary-green),
+      0 0 20px var(--primary-pink);
+  }
+  50% { 
+    text-shadow: 
+      0 0 15px var(--primary-pink),
+      0 0 30px var(--primary-green);
+  }
+}
+
+.portal-effect {
+  animation: portal-glow 3s ease-in-out infinite alternate;
+}
+
+.text-glow {
+  animation: text-glow 2s ease-in-out infinite alternate;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, var(--primary-green), var(--primary-pink));
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, var(--primary-pink), var(--primary-green));
+}
