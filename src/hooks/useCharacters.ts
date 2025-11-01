@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Character } from '@/types'
-
+import { useQuery } from '@tanstack/react-query'
 interface CharactersResponse {
   info: {
     count: number
