@@ -62,7 +62,7 @@ const CharacterGrid: React.FC = () => {
   if (error) {
     return (
       <ErrorMessage>
-        ❌ Error cargando personajes: {error.message}
+        ❌ Error cargando personajes: {error} {/* CORREGIDO: error en lugar de error.message */}
       </ErrorMessage>
     );
   }
